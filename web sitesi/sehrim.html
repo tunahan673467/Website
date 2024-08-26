@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+        background-image: url(file:///C:/Users/demir/OneDrive/Masa%C3%BCst%C3%BC/manzara3.jpg);
+        background-color: rgb(173, 172, 174);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .navbar {
+        width: 90%;
+        height: 10%;
+        background-color: #1f6b6a;
+        padding: 50 px;
+        display: flex;
+        justify-content: center;
+        margin-left: 70px;
+    }
+        
+        .navbar a {
+            margin: 0 40px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.784);
+        }
+        .navbar {
+        border: 10px solid rgb(18, 53, 24); 
+        border-radius: 9px; 
+        padding: 40px; }
+
+        a{
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: lighter;
+          font-size: 20px;}
+          
+          
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        #slider {
+            position: relative;
+            height: 760px;
+            overflow: hidden;
+        }
+        #slider img {
+            border-radius:20px ;
+            position: absolute;
+            margin-top: 10px;
+            top: 0;
+            left: 0;
+            margin-left: 600px;
+            width: 500px;
+            height: 750px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        #slider img.active {
+            opacity: 1;
+        }
+        #slider nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #slider nav button {
+            background-color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 0 10px;
+            padding: 0;
+            cursor: pointer;
+        }
+        #slider nav button.active {
+            background-color: #333;
+        }
+        p{
+            font-family:'Roboto Condensed', sans-serif;
+            font-size: 20px;
+        }
+        #container {
+            border-radius: 10%;
+         width: 900px;
+         height: 325px ;
+         margin: 0 auto;
+         padding: 20px;
+            background-color: rgba(238, 238, 238, 0.384); /* İçerik kutusu arka plan rengi */
+         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Gölgelendirme */}
+        #content {
+        
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #content h2 {
+            font-size: 32px;
+            margin-top: 0;
+        }
+        #content ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #content li {
+            margin-bottom: 10px;
+        }
+        #content a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="sehrim.html">Şehrim</a>
+                    <a href="iletişim.html">İletişim</a>
+                    <a href="mirasimiz.html">Mirasımız</a>
+                    <a href="anasayfa.html">Anasayfa</a>
+                    <a href="hakkimda.html">Hakkımda</a>
+                    <a href="özgeçmiş.html">Özgeçmişim</a>
+                    <a href="ilgialanlarım.html">İlgi Alanlarım</a>
+       
+    </div>
+    <div id="container">
+        <h1>ZONGULDAK</h1>
+        <p>Zonguldak, Zonguldak ilinin merkez ilçesi ve aynı isme sahip şehri. Karadeniz kıyısında bulunan şehir, özellikle limanıyla Türkiye'nin Karadeniz ülkeleriyle arasındaki deniz ticaretinde önemli bir yere sahiptir. Ayrıca Türkiye'nin en zengin taşkömürü madenlerini barındırır.  </p>
+        <P>Zonguldak ismi Fransızca "zone" ve Türkçe "Göldağı" sözcüklerinin birleşimiyle oluşmuştur.
+         Zonguldak ve civarındaki kömür ocakları ilk kez Fransızlar tarafından işletilmiştir. Bu dönemde Fransızlar, kömür havzasını belirtmek için bölgede rakımı en yüksek yer olan Göldağı'nı seçmiş ve başına "alan, bölge" anlamına gelen "zone" sözcüğü eklemiştir. "Zone Göldağı" sözü halk arasında zamanla Zonguldak halini almıştır.</P>
+    </div>
+    
+
+
+
+    <div id="slider">
+        <a href="ornek.html">
+            
+         <img src="C:\Users\demir\OneDrive\Masaüstü\ödev fotosu4.jpg" alt="Resim 1" class="active"> </a>
+        <img src="C:\Users\demir\OneDrive\Masaüstü\ödev fotosu6.jpg" alt="Resim 2">
+        <img src="C:\Users\demir\OneDrive\Masaüstü\ödev fotosu7.jpg" alt="Resim 3">
+        <img src="C:\Users\demir\OneDrive\Masaüstü\ödev fotosu8.jpg" alt="Resim 4">
+        <nav>
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </nav>
+    </div>
+    
+    <script>
+        const slider = document.querySelector("#slider");
+        const images = slider.querySelectorAll("img");
+        const navButtons = slider.querySelectorAll("nav button");
+        let currentIndex = 0;
+        setInterval(() => {
+            images[currentIndex].classList.remove("active");
+            navButtons[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
+            navButtons[currentIndex].classList.add("active");
+        }, 5000);
+        navButtons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                images[currentIndex].classList.remove("active");
+                navButtons[currentIndex].classList.remove("active");
+                currentIndex = index;
+                images[currentIndex].classList.add("active");
+                navButtons[currentIndex].classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>

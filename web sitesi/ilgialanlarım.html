@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+   body {
+        background-image: url(file:///C:/Users/demir/OneDrive/Masa%C3%BCst%C3%BC/arenadasneijder.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .navbar {
+        width: 90%;
+        height: 10%;
+        background-color: #1f6b6a;
+        padding: 50 px;
+        display: flex;
+        justify-content: center;
+    }
+        
+        .navbar a {
+            margin: 0 40px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.784);
+        }
+    #container {
+    border-radius: 10%;
+    width: 900px;
+    height: 225px ;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(238, 238, 238, 0.742); /* İçerik kutusu arka plan rengi */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+}#photo {
+    float: left;
+    border-radius: 20px;
+    margin-right: 20px;
+    width: 400px;
+    height:200px ;
+}
+        .left-image {
+            border: 5px;
+            border-style: solid;
+            border-radius: 25px ;
+            float: left;
+            margin-right: 250px;
+        }
+
+        .right-image {
+            border: 5px;
+            border-style: solid ;
+             border-radius: 25px;
+            float: right;
+            margin-left: 250px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family :'Rubik',sans-serif ;
+
+        } p {
+            font-family: 'Roboto Condensed', sans-serif;
+           font-size: 20px;
+
+        }
+        .navbar {
+        border: 10px solid rgb(18, 53, 24); 
+        border-radius: 9px; 
+        padding: 40px; }
+
+        a{
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: lighter;
+          font-size: 20px;
+          
+          
+        }
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Rubik:ital@1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script>
+        // API verisini almak için XMLHttpRequest kullanarak istek gönderme
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.collectapi.com/sport/leaguesList");
+        xhr.setRequestHeader("content-type", "application/json");
+        xhr.setRequestHeader("authorization", "apikey your_token");
+    
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            console.log(response);
+            // API'den gelen verileri işleyebilir veya görsel olarak görüntüleyebilirsiniz
+          } else {
+            console.error("API isteği başarısız. Hata kodu: " + xhr.status);
+          }
+        };
+    
+        xhr.onerror = function() {
+          console.error("API isteği gerçekleştirilirken bir hata oluştu.");
+        };
+    
+        xhr.send();
+      </script>
+    <div class="navbar">
+        <a href="sehrim.html">Şehrim</a>
+                    <a href="iletişim.html">İletişim</a>
+                    <a href="mirasimiz.html">Mirasımız</a>
+                    <a href="anasayfa.html">Anasayfa</a>
+                    <a href="hakkimda.html">Hakkımda</a>
+                    <a href="özgeçmiş.html">Özgeçmişim</a>
+                    <a href="ilgialanlarım.html">İlgi Alanlarım</a>
+       
+    </div>
+    <div id="container">
+        <img id="photo" src="C:\Users\demir\OneDrive\Masaüstü\ödevresim10.jpg" alt="Fotoğraf">
+        <p>Futbol oynamayı ve izlemeyi çok severim. Çocukluğumdan beri Galatasaraylıyım.Sadece Türkiye ligi değil dünyada çoğu ligin maçlarını ve takımlarını yakından takip ederim.  </p>
+        
+    </div>
+    <br>
+    <div id="container">
+        <img id="photo" src="C:\Users\demir\OneDrive\Masaüstü\ödevresim11.jpg" alt="Fotoğraf">
+        <p>Çocukluğumdan beri çoğu erkek çocuk gibi arabalara dehşet ilgim vardır. Araba ile ilgili her konuda ; sürmek, izlemek ,temizlemek,gezmek gibi her türlü ilgi alanıma dahildir. Türkiye şartlarında aşırı zor gözükse de inşallah bir gün kendi arabama binmek nasip olur.  </p>
+        
+    </div>
+    
+</body>
+</html>
